@@ -1,18 +1,18 @@
 body{
     padding: 1em;
-    background-color: rgb(121, 167, 207);
+    background-color: skyblue;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 nav{
     display: block;
-    margin: 1em
+    margin-bottom: 1em;
 }
 a{
     text-decoration: none;
 }
 nav a{
     background-color: darkolivegreen;
-    color: rgb(32, 51, 218);
+    color: goldenrod;
     font-size: 1em;
     padding: 0.25em;
     margin: 1px;
@@ -27,6 +27,7 @@ nav a{
     min-height: 80px;
     display: inline-flex;
     box-shadow: 1px 1px 0px 0px rgba(0,0,0,0.5);
+    overflow: hidden;
 }
 .card img{
     width: 100%;
@@ -46,4 +47,19 @@ nav a{
     border: none;
     border-radius: 12px;
     box-shadow: 0 0 1px 1px rgba(0,0,0,0.1);
+}
+.card-description{
+    max-height: 0px;
+    height: 0;
+    opacity: 0;
+    transition: 1s;
+    /* display: none; */
+}
+.card:hover .card-description{
+    max-height: 1000px;
+    height: 444px;
+    opacity: 1;
+    transition: 1s;
+
+    /* display: block; */
 }
